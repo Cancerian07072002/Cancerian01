@@ -1,0 +1,261 @@
+**1. Area of a Rectangle**
+Write a Python program that prompts the user to enter the length and breadth of a rectangle. The program should then calculate and print the area.
+
+```python
+# Get input from the user for length and breadth
+# The input() function returns a string, so we convert it to float
+length = float(input("Enter the length of the rectangle: "))
+breadth = float(input("Enter the breadth of the rectangle: "))
+
+# Calculate the area using the formula: area = length * breadth
+area = length * breadth
+
+# Print the result
+# The f-string is a clean way to embed variables in a string
+print(f"The area of the rectangle is: {area}")
+
+# Sample Output:
+# Enter the length of the rectangle: 10
+# Enter the breadth of the rectangle: 5
+# The area of the rectangle is: 50.0
+```
+
+**2. Sum of Three Numbers**
+Write a program that takes three numbers as input from the user and prints their sum.
+
+```python
+# Get three numbers from the user
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+
+# Calculate the sum
+total_sum = num1 + num2 + num3
+
+# Print the sum
+print(f"The sum of the three numbers is: {total_sum}")
+
+# Sample Output:
+# Enter the first number: 10
+# Enter the second number: 20
+# Enter the third number: 30
+# The sum of the three numbers is: 60
+
+```
+
+**3. BMI Calculator**
+Create a program that calculates the Body Mass Index (BMI) of a person. The program should take the weight in kilograms and height in meters as input. The formula for BMI is BMI=height2weight.
+
+```python
+# Get weight in kilograms and height in meters from the user
+weight = float(input("Enter your weight in kg: "))
+height = float(input("Enter your height in meters: "))
+
+# Calculate BMI using the formula
+bmi = weight / (height ** 2)
+
+# Print the calculated BMI
+print(f"Your BMI is: {bmi:.2f}")
+
+# Sample Output:
+# Enter your weight in kg: 70
+# Enter your height in meters: 1.75
+# Your BMI is: 22.86
+
+```
+
+**4. Check for Palindrome**
+Write a program that checks if a given string is a palindrome (a word that reads the same forwards and backward).
+
+```python
+# Get a string from the user
+s1 = input("Enter a string: ")
+
+# Reverse the string using slicing [::-1]
+s2 = s1[::-1]
+
+# Check if the original string is equal to the reversed string
+if s1 == s2:
+    print(f"'{s1}' is a palindrome.")
+else:
+    print(f"'{s1}' is not a palindrome.")
+
+# Sample Output 1:
+# Enter a string: madam
+# 'madam' is a palindrome.
+
+# Sample Output 2:
+# Enter a string: hello
+# 'hello' is not a palindrome.
+
+```
+
+**5. Find the Largest of Three Numbers**
+Write a program that finds and prints the largest of three numbers entered by the user.
+
+```python
+# Get three numbers from the user
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+c = int(input("Enter the third number: "))
+
+# Use if-elif-else to compare the numbers and find the largest
+if a >= b and a >= c:
+    largest = a
+elif b >= a and b >= c:
+    largest = b
+else:
+    largest = c
+
+# Print the largest number
+print(f"The largest number is: {largest}")
+
+# Sample Output:
+# Enter the first number: 15
+# Enter the second number: 8
+# Enter the third number: 22
+# The largest number is: 22
+
+```
+
+**6. Fibonacci Series**
+Write a program to print the Fibonacci series up to a number of terms specified by the user. The Fibonacci series is a sequence where each number is the sum of the two preceding ones (e.g., 0, 1, 1, 2, 3, 5...).
+
+```python
+# Get the number of terms from the user
+n = int(input("How many terms in the Fibonacci series? "))
+
+# Initialize the first two terms
+a = 0
+b = 1
+
+# Handle edge cases for n=0 and n=1
+if n <= 0:
+    print("Please enter a positive integer.")
+elif n == 1:
+    print("Fibonacci series:")
+    print(a)
+else:
+    print("Fibonacci series:")
+    print(a)
+    print(b)
+    count = 2
+    while count < n:
+        c = a + b
+        print(c)
+        a = b
+        b = c
+        count += 1
+
+# Sample Output:
+# How many terms in the Fibonacci series? 7
+# Fibonacci series:
+# 0
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
+
+```
+
+**7. Create a Simple Addition Function**
+Write a function that takes two numbers as arguments and returns their sum. Then, call the function with user input.
+
+```python
+# Define a function named 'add' that takes two arguments
+def add(a, b):
+    # Calculate the sum and return it
+    return a + b
+
+# Get two numbers from the user
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Call the function and store the returned value
+result = add(num1, num2)
+
+# Print the final result
+print(f"The sum of {num1} and {num2} is: {result}")
+
+# Sample Output:
+# Enter the first number: 4.5
+# Enter the second number: 6.5
+# The sum of 4.5 and 6.5 is: 11.0
+
+```
+
+**8. Check for Even or Odd**
+Create a program that asks the user for a number and uses an `if...else` statement to determine if the number is even or odd.
+
+```python
+# Get an integer from the user
+number = int(input("Enter an integer: "))
+
+# Use the modulo operator (%) to check if the number is even
+# If a number divided by 2 has a remainder of 0, it's even
+if number % 2 == 0:
+    print(f"The number {number} is even.")
+else:
+    print(f"The number {number} is odd.")
+
+# Sample Output 1:
+# Enter an integer: 10
+# The number 10 is even.
+
+# Sample Output 2:
+# Enter an integer: 7
+# The number 7 is odd.
+```
+
+**9. Password and Username Checker**
+Write a program that checks for a correct username and password. Use nested `if` statements to first verify the username and then the password.
+
+```python
+# Pre-defined username and password
+correct_username = "admin"
+correct_password = "password123"
+
+# Get user input for username and password
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+# Check the username first
+if username == correct_username:
+    # If username is correct, check the password
+    if password == correct_password:
+        print("Login successful! Welcome.")
+    else:
+        print("Incorrect password. Access denied.")
+else:
+    print("Incorrect username. Access denied.")
+
+# Sample Output:
+# Enter your username: admin
+# Enter your password: wrong_password
+# Incorrect password. Access denied.
+```
+
+**10. String Reversal**
+Write a function that takes a string as an argument and returns the reversed string.
+
+String Reverser Function
+
+```python
+# Define a function to reverse a string
+def reverse_string(s):
+    # Use slicing to reverse the string and return it
+    return s[::-1]
+
+# Get a string from the user
+user_string = input("Enter a string to reverse: ")
+
+# Call the function and print the result
+reversed_str = reverse_string(user_string)
+print(f"The reversed string is: {reversed_str}")
+
+# Sample Output:
+# Enter a string to reverse: hello
+# The reversed string is: olleh
+```
